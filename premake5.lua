@@ -22,7 +22,7 @@ project "GLFW"
     	}
 	
 	filter "system:windows"
-        	buildoptions { "-std=c11", "-lgdi32" }
+        	buildoptions { "/utf-8" }
  		systemversion "latest"
  		staticruntime "On"
         	files
@@ -42,5 +42,5 @@ project "GLFW"
             		"_GLFW_WIN32",
             		"_CRT_SECURE_NO_WARNINGS"
 		}
- 	-- filter { "system:windows", "configurations:Release" }
- 	-- 	buildoptions "/MT"
+	filter { "system:windows", "configurations:Release" }
+		buildoptions "/MT"
